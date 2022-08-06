@@ -143,7 +143,8 @@ local function Insert_Weapons_Into_Hash_Table(weapon_group_table)
         local model = model
         local name = data.name
         local hash = data.hash
-
+        
+        data.model = model
         WeaponHash[hash] = {name = name, hash = hash, model = model}
         WeaponHash[name] = {name = name, hash = hash, model = model}
         WeaponHash[model] = {name = name, hash = hash, model = model}
@@ -160,3 +161,12 @@ Insert_Weapons_Into_Hash_Table(WeaponGroup.Sniper)
 Insert_Weapons_Into_Hash_Table(WeaponGroup.Heavy)
 Insert_Weapons_Into_Hash_Table(WeaponGroup.Thrown)
 Insert_Weapons_Into_Hash_Table(WeaponGroup.Misc)
+
+function WeaponHash:GetWeaponData(weapon_name)
+    for model, data in pairs(WeaponHash) do
+        if model == weapon_name then
+            return data
+        end
+    end
+    return nil
+end
