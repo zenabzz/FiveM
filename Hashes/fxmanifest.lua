@@ -4,5 +4,5 @@ game 'gta5'
 author 'zenabz'
 
 client_scripts {
-    'WeaponHash.lua'
+    'WeaponHashes.lua',
 }
