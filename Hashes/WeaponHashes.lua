@@ -1,5 +1,6 @@
--- Available Models, Hashes & Names were taken from: https://wiki.rage.mp/index.php?title=Weapons
 -- Created by zenabz (Discord: zenabz#0646, Discord ID: 354714929951145987)
+-- Available Models, Hashes & Names were taken from: https://wiki.rage.mp/index.php?title=Weapons
+-- Any reference to `Game Build` refers to: https://docs.fivem.net/docs/server-manual/server-commands/#sv_enforcegamebuild-build
 
 WeaponHash = {} -- Create a table for the all weapon Hashes, stored: [Model] = {Name, Hash, Model}
 WeaponGroup = {} -- Create a table for the all weapon groups, stored: [Model] = {Name, Hash, Model}
@@ -42,10 +43,10 @@ WeaponGroup.Pistol = {
     ['weapon_revolver_mk2'] = {Name = 'Heavy Revolver MK II', Hash = 0xCB96392F},
     ['weapon_doubleaction'] = {Name = 'Double Action Revolver', Hash = 0x97EA20B8},
     ['weapon_raypistol'] = {Name = 'Up-n-Atomizer', Hash = 0xAF3696A1},
-    ['weapon_ceramicpistol'] = {Name = 'Cermaic Pistol', Hash = 0x2B5EF5EC}, -- Does this even exist ?!?
+    ['weapon_ceramicpistol'] = {Name = 'Cermaic Pistol', Hash = 0x2B5EF5EC},
     ['weapon_navyrevolver'] = {Name = 'Navy Revolver', Hash = 0x917F6C8C},
-    ['weapon_gadgetpistol'] = {Name = 'Perico Pistol', Hash = 0x57A4368C}, -- Another one that i'm not even sure if exists
-    ['weapon_stungun_mp'] = {Name = 'Stun Gun', Hash = 0x45CD9CF3}, -- Different stun gun used in MP?
+    ['weapon_gadgetpistol'] = {Name = 'Perico Pistol', Hash = 0x57A4368C}, -- Perico Pistol, Requires Game Build 2189, The Cayo Perico Heist
+    ['weapon_stungun_mp'] = {Name = 'Stun Gun', Hash = 0x45CD9CF3}, -- Same Stun gun as `weapon_stungun`, This one appears bigger in the weapon wheel
 }
 
 WeaponGroup.SMG = {
@@ -69,7 +70,7 @@ WeaponGroup.Shotgun = {
     ['weapon_heavyshotgun'] = {Name = 'Heavy Shotgun', Hash = 0x3AABBBAA},
     ['weapon_dbshotgun'] = {Name = 'Double Barrel Shotgun', Hash = 0xEF951FBB},
     ['weapon_autoshotgun'] = {Name = 'Sweeper Shotgun', Hash = 0x12E82D3D},
-    ['weapon_combatshotgun'] = {Name = 'Combat Shotgun', Hash = 0x5A96BA4},
+    ['weapon_combatshotgun'] = {Name = 'Combat Shotgun', Hash = 0x5A96BA4}, -- Requires Game Build 2189, Cayo Perico Heist
 }
 
 WeaponGroup.AssaultRifle = {
@@ -82,10 +83,10 @@ WeaponGroup.AssaultRifle = {
     ['weapon_specialcarbine_mk2'] = {Name = 'Special Carbine Mk II', Hash = 0x969C3D67},
     ['weapon_bullpuprifle'] = {Name = 'Bullpup Rifle', Hash = 0x7F229F94},
     ['weapon_bullpuprifle_mk2'] = {Name = 'Bullpup Rifle Mk II', Hash = 0x84D6FAFD},
-    ['weapon_compactrifle'] = {Name = 'Compact Rifle', Hash = 0x624FE830},
-    ['weapon_militaryrifle'] = {Name = 'Military Rifle', Hash = 0x9D1F17E6},
-    ['weapon_heavyrifle'] = {Name = 'Heavy Rifle', Hash = 0xC78D71B4},
-    ['weapon_tacticalrifle'] = {Name = 'Tactical Rifle', Hash = 0xD1D5F52B},
+    ['weapon_compactrifle'] = {Name = 'Compact Rifle', Hash = 0x624FE830}, 
+    ['weapon_militaryrifle'] = {Name = 'Military Rifle', Hash = 0x9D1F17E6}, -- Requires Game Build 2189, Cayo Perico Heist
+    ['weapon_heavyrifle'] = {Name = 'Heavy Rifle', Hash = 0xC78D71B4}, -- Requires Game Build 2545, The Contract
+    ['weapon_tacticalrifle'] = {Name = 'Service Carbine', Hash = 0xD1D5F52B}, -- Service Carbine in Criminal Enterprises, Requires Game Build 2699
 }   
 
 WeaponGroup.MachineGun = {
@@ -101,7 +102,7 @@ WeaponGroup.Sniper = {
     ['weapon_heavysniper_mk2'] = {Name = 'Heavy Sniper Mk II', Hash = 0xA914799},
     ['weapon_marksmanrifle'] = {Name = 'Marksman Rifle', Hash = 0xC734385A},
     ['weapon_marksmanrifle_mk2'] = {Name = 'Marksman Rifle Mk II', Hash = 0x6A6C02E0},
-    ['weapon_precisionrifle'] = {Name = 'Precision Rifle', Hash = 0x6E7DDDEC},
+    ['weapon_precisionrifle'] = {Name = 'Precision Rifle', Hash = 0x6E7DDDEC}, -- Requires Game Build 2699, Criminal Enterprises
 }
 
 WeaponGroup.Heavy = {
@@ -114,7 +115,7 @@ WeaponGroup.Heavy = {
     ['weapon_hominglauncher'] = {Name = 'Homing Launcher', Hash = 0x63AB0442},
     ['weapon_compactlauncher'] = {Name = 'Compact Grenade Launcher', Hash = 0x0781FE4A},
     ['weapon_rayminigun'] = {Name = 'Widowmaker', Hash = 0xB62D1F67},
-    ['weapon_emplauncher'] = {Name = 'Compact EMP Launcher', Hash = 0xDB26713A},
+    ['weapon_emplauncher'] = {Name = 'Compact EMP Launcher', Hash = 0xDB26713A}, -- Requires Game Build 2545, The Contract
 }
 
 WeaponGroup.Thrown = {
@@ -131,11 +132,11 @@ WeaponGroup.Thrown = {
 }
 
 WeaponGroup.Misc = {
-    ['weapon_petrolcan'] = {Name = 'Jerry Can', Hash = 0x34A67B97},
-    ['gadget_parachute'] = {Name = 'Parachute', Hash = 0xFBAB5776},
-    ['weapon_fireextinguisher'] = {Name = 'Fire Extinguisher', Hash = 0x060EC506},
-    ['weapon_hazardcan'] = {Name = 'Hazardous Jerry Can', Hash = 0xBA536372},
-    ['weapon_fertilizercan'] = {Name = 'Fertilizer Can', Hash = 0x184140A1},
+    ['gadget_parachute'] = {Name = 'Parachute', Hash = 0xFBAB5776}, -- Gives the player a parachute
+    ['weapon_fireextinguisher'] = {Name = 'Fire Extinguisher', Hash = 0x060EC506}, -- Doesn't have an icon in the weapon wheel
+    ['weapon_petrolcan'] = {Name = 'Jerry Can', Hash = 0x34A67B97}, -- Normal Petrol Can (Red)
+    ['weapon_hazardcan'] = {Name = 'Hazardous Jerry Can', Hash = 0xBA536372}, -- Hazardous Can (Yellowish)
+    ['weapon_fertilizercan'] = {Name = 'Fertilizer Can', Hash = 0x184140A1}, -- Ferilizer Can (Blue)
 }
 
 local function Insert_Weapons_Into_Hash_Table(weapon_group_table)
@@ -162,13 +163,13 @@ Insert_Weapons_Into_Hash_Table(WeaponGroup.Heavy)
 Insert_Weapons_Into_Hash_Table(WeaponGroup.Thrown)
 Insert_Weapons_Into_Hash_Table(WeaponGroup.Misc)
 
-function Get_Weapon_Data(weapon_name)
+function Get_Weapon_Data(weapon_name) -- Function can be called using the following weapon attributes: (Name, Hash, Model)
     for model, data in pairs(WeaponHash) do
-        if model == weapon_name then
-            return data
+        if model == weapon_name or data.Name == weapon_name or data.Hash == tonumber(weapon_name) then
+            return data -- Returns data in a table format {Name, Hash, Model}
         end
     end
-    return nil
+    return nil -- Returns nil 
 end
 
 exports('WeaponHash', function()
